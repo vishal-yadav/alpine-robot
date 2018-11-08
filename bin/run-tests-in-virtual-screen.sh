@@ -5,6 +5,7 @@ if [ $ROBOT_THREADS -eq 1 ]
 then
     robot \
     --outputDir /opt/robotframework/reports \
+    -x /opt/robotframework/reports/report.xml \
     ${ROBOT_OPTIONS} \
     /opt/robotframework/tests
 else
@@ -12,6 +13,7 @@ else
     --verbose \
     --processes $ROBOT_THREADS \
     --outputDir /opt/robotframework/reports \
+    -x /opt/robotframework/reports/report.xml \
     ${ROBOT_OPTIONS} \
     /opt/robotframework/tests
 fi
